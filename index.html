@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TFT Team Builder</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER (RESET) -->
+  <header id="resetBtn">
+    <h1>TFT Team Builder</h1>
+    <small>(Click para reiniciar)</small>
+  </header>
+
+  <main class="layout">
+
+    <!-- SINERGIAS -->
+    <aside class="traits-panel">
+      <h3>Sinergias activas</h3>
+      <ul id="traitsList"></ul>
+    </aside>
+
+    <!-- TABLERO -->
+    <section id="board" class="board"></section>
+
+    <!-- INFO CAMPEÓN -->
+    <aside id="infoPanel" class="info">
+      <p>Selecciona una unidad</p>
+    </aside>
+
+  </main>
+
+  <!-- BANCO -->
+  <section id="champList" class="champ-list"></section>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+
