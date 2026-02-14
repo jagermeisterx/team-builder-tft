@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TFT Team Builder</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
 
-  <!-- HEADER (RESET) -->
-  <header id="resetBtn">
+  <!-- HEADER -->
+  <header class="header" id="resetBtn">
     <h1>TFT Team Builder</h1>
-    <small>(Click para reiniciar)</small>
+    <p>Click aquí para reiniciar • Arrastra campeones al tablero</p>
   </header>
 
   <main class="layout">
 
     <!-- SINERGIAS -->
-    <aside class="traits-panel">
-      <h3>Sinergias activas</h3>
-      <ul id="traitsList"></ul>
+    <aside class="traits">
+      <h3>Sinergias</h3>
+      <div id="traitList"></div>
     </aside>
 
     <!-- TABLERO -->
-    <section id="board" class="board"></section>
+    <section class="board-section">
+      <div id="board"></div>
+    </section>
 
-    <!-- INFO CAMPEÓN -->
-    <aside id="infoPanel" class="info">
-      <p>Selecciona una unidad</p>
+    <!-- INFO -->
+    <aside class="info" id="info">
+      <p>Selecciona un campeón</p>
     </aside>
 
   </main>
 
-  <!-- BANCO -->
-  <section id="champList" class="champ-list"></section>
+  <!-- POOL -->
+  <section id="pool" class="pool"></section>
 
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
+
+
+
 

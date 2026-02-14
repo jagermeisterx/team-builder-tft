@@ -1,55 +1,35 @@
-/* ===== GENERAL ===== */
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f0f12;
+  background: #111;
   color: white;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
-header {
+.header {
   text-align: center;
-  padding: 14px;
-  background: #1c1c22;
+  padding: 15px;
+  background: #1a1a1a;
   cursor: pointer;
-  user-select: none;
 }
 
-/* ===== LAYOUT ===== */
+/* LAYOUT */
 
 .layout {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: 200px 1fr 220px;
+  gap: 10px;
+  padding: 10px;
 }
 
-/* ===== SINERGIAS ===== */
+/* BOARD */
 
-.traits-panel {
-  background: #1a1a20;
-  padding: 12px;
-  border-radius: 8px;
-  min-height: 300px;
-}
-
-.traits-panel ul {
-  padding-left: 0;
-}
-
-.traits-panel li {
-  list-style: none;
-  margin: 6px 0;
-  background: #2a2a33;
-  padding: 6px;
-  border-radius: 6px;
-}
-
-/* ===== TABLERO HEX ===== */
-
-.board {
+#board {
   display: grid;
   grid-template-columns: repeat(7, 80px);
   gap: 6px;
@@ -58,88 +38,48 @@ header {
 
 .hex {
   width: 80px;
-  height: 90px;
+  height: 80px;
   background: #222;
   clip-path: polygon(
-    50% 0%, 95% 25%, 95% 75%,
-    50% 100%, 5% 75%, 5% 25%
+    50% 0%, 100% 25%, 100% 75%,
+    50% 100%, 0% 75%, 0% 25%
   );
-
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  transition: background 0.15s;
+  align-items: center;
 }
 
-.hex:hover {
-  background: #333;
-}
+/* PIEZAS */
 
-/* imagen se adapta al hex */
-.hex img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-/* offset filas pares */
-.hex:nth-child(14n + 8),
-.hex:nth-child(14n + 9),
-.hex:nth-child(14n + 10),
-.hex:nth-child(14n + 11),
-.hex:nth-child(14n + 12),
-.hex:nth-child(14n + 13),
-.hex:nth-child(14n + 14) {
-  transform: translateX(40px);
-}
-
-/* ===== INFO ===== */
-
-.info {
-  background: #1a1a20;
-  padding: 12px;
+.unit {
+  width: 70px;
+  height: 70px;
   border-radius: 8px;
-  text-align: center;
+  cursor: grab;
+  object-fit: cover;
 }
 
-.info img {
-  width: 120px;
-}
-
-/* ===== LISTA CAMPEONES ===== */
-
-.champ-list {
+.pool {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 15px;
   justify-content: center;
-  background: #141418;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #333;
 }
 
-.champ-card {
-  width: 70px;
-  background: #2b2b33;
+/* SIDE PANELS */
+
+.traits, .info {
+  background: #1a1a1a;
+  padding: 10px;
   border-radius: 6px;
-  padding: 6px;
-  cursor: grab;
-  text-align: center;
-  transition: transform 0.1s;
+  min-height: 200px;
 }
 
-.champ-card:hover {
-  transform: scale(1.05);
-}
+/* RESPONSIVE */
 
-.champ-card img {
-  width: 100%;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;
   }
